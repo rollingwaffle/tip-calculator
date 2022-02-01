@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://kit.fontawesome.com/604eade3a0.js" crossorigin="anonymous"></script>
+  
+  <title>  Tip calculator app | Frontend Mentor</title>
+
+  <script defer src="script.js"></script>   
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+    <div class="card">
+      <div class="input">
+        <div class="bill-container">
+          <div class="label-wrapper">
+            <label for="inp-bill">Bill</label>
+          </div>
+
+          <div class="inp-wrapper">
+            <input class="inp-text" type="text" name="inp-bill" id="inp-bill" placeholder="0.0"  >
+            <i style="color: hsl(184, 14%, 56%) ;" class="fa fa-inr"></i>
+          </div>
+        </div>
+
+        <div class="tip-container">
+          <div class="label-wrapper">
+            <label for="inp-tip">select tip in %</label>
+          </div>
+
+          <div class="btn-wrapper">
+            <div class="btn tip">5%</div>
+            <div class="btn tip">10%</div>
+            <div class="btn tip btn-active" >15%</div>
+            <div class="btn tip">25%</div>
+            <div class="btn tip">50%</div>
+            <input class="inp-text" type="text"name="inp-tip" id="inp-tip" placeholder="Custom">
+          </div>
+        </div>
+        
+        <div class="people-container">
+          <div class="label-wrapper">
+            <label for="inp-people">Number of people</label>
+            <div class="error-msg" id="err-msg">can't be zero</div>
+          </div>
+
+          <div class="inp-wrapper">
+            <input class="inp-text" type="text"name="inp-people" id="inp-people" placeholder="1">
+            <img src="./images/icon-person.svg" alt="person icon">
+          </div>
+        </div>
+
+      </div>
+      <div class="output">
+        <div class="line-wrapper">
+          <div class="line-output">
+            <div class="title-wrapper">
+              <div class="title">
+                Tip Amount
+              </div>
+              <div class="desc">
+                / person
+              </div>
+
+            </div>
+            
+            <div class="value"><i style="color: hsl(183, 100%, 32%) ;" class="fa fa-inr rupee"></i> 0.0</div>
+          </div>
+          
+          <div class="line-output">
+            <div class="title-wrapper">
+              <div class="title">
+                Total
+              </div>
+              <div class="desc">
+                / person
+              </div>
+
+            </div>
+            
+            <div class="value"><i style="color: hsl(183, 100%, 32%) ;" class="fa fa-inr rupee"></i> 0.0</div>
+          </div>
+        <button class="btn1 reset">RESET</button>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+ --Very-dar-cyan: hsl(183, 100%, 15%);--strong-dar-cyan: hsl(183, 100%, 32%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);--Lightdark-grayish-cyan: hsl(185, 100%, 39%);
+--Light-grayish-cyan-1: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--btn-hover:rgb(115, 216, 204);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Space Mono', monospace; 
+    background-color: var(--Light-grayish-cyan);
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo{
+    margin: 5rem 0 3.5rem 0;
+}
+
+.card{
+    background-color: var(--White);
+    width: 100%;
+    border-top-left-radius: 2.5rem;
+    display: flex;border-top-right-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2.5rem;
+
+}
+
+.input{
+    /* border: 1px solid hotpink; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.label-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Space Mono', monospace;
+}
+label{
+    color: var(--Dark-grayish-cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.error-msg{
+    color: indianred;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.show-error-msg{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.inp-text{
+    width: 100%;
+    border: none;background-color: var(--Light-grayish-cyan-1);
+    border-radius: 0.5rem;
+    font-family: 'Space Mono', monospace;
+    padding: 0.5rem 2.4rem;
+    text-align: right;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--Very-dar-cyan);
+
+}
+
+.inp-text:focus{
+    outline: none;
+    border: 2px solid var(--Very-dar-cyan);
+}
+
+.inp-wrapper i{
+ font-size: 1.5rem;
+ position: absolute;
+ left: 1.5rem;
+ top: 1.5rem;
+}
+
+.inp-wrapper{
+    position: relative;
+}
+.inp-wrapper img{
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+}
+
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.btn{
+    width: 46%;
+    background-color: var(--Very-dar-cyan);
+    color: var(--Light-grayish-cyan);
+    text-align: center;
+    padding: 0.6rem 0;
+    border-radius: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    /* margin-top: 1rem; */
+}
+.btn:hover{
+    background-color: var(--btn-hover)
+}
+
+.btn-active{
+    background-color: var(--Lightdark-grayish-cyan);
+}
+
+.btn-wrapper .inp-text{
+    width:46%
+}
+
+
+
+.output{
+    background-color: var(--Very-dar-cyan)
+    ;
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.output .title{
+    color: var(--White);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.output .desc{
+    color: var(--Dark-grayish-cyan-1);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.output .value{
+    color: var(--strong-dar-cyan);
+    font-size: 3rem;
+    font-weight: 700;
+}
+.value i {
+  font-size: 2rem;
+  /* padding-bottom: 5rem; */
+}
+
+.output button{
+    background-color: var(--strong-dar-cyan); 
+    width: 100%;
+    color: var(--Very-dar-cyan)
+     ;
+     outline: none;
+     border: none;
+     border-radius: 0.5rem;
+     padding: 1rem 0;
+     font-size: 2.3rem;
+     font-weight: 700;
+     transition: all 0.3s ease;
+     cursor: pointer;
+     /* margin: 3rem; */
+}
+
+.output button:hover{
+   background-color: var(--btn-hover)
+}
+
+
+.line-output{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem 0 2.4rem 0;
+}
+
+
+@media screen and (min-width:1440px){
+    .card{
+        width: 64%;
+        flex-direction: row;
+        align-items: stretch;
+        padding:3.4 rem;
+        gap: 1.5rem;
+
+    }
+
+    .input{
+        /* border: 1px solid red; */
+        width: 105%;
+        padding: 0 3.5rem 1.5rem 1.5rem;
+    }
+
+    .input .label-wrapper{
+        padding: 1rem 0;
+    }
+
+
+    .output{
+        width: 95%;
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem;
+        margin: 5rem;
+        
+    }
+
+    .output .line-wrapper{
+        margin:0.5rem 0 0.2rem 0;
+
+    }
+
+    .output .value{
+        font-size: 4rem;
+    }
+
+    .output .title{
+        font-size: 2.3rem;
+    }
+      .output .desc{
+        font-size: 2rem;
+    }  
+
+}
+
+@media screen and (min-width:710px){
+   .card{
+       width:70%
+   }
+}
